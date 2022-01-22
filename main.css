@@ -1,0 +1,24 @@
+:root {
+  --amount-items-in-cart: 0;
+}
+
+#shopping-cart-icon.filled {
+  position: relative;
+}
+
+#shopping-cart-icon.filled::after {
+  position: absolute;
+  counter-reset: amount-items-in-cart var(--amount-items-in-cart);
+  content: counter(amount-items-in-cart);
+  background-color: orange;
+  top: 6px;
+  left: 7px;
+  right: -7px;
+  border-radius: 30px;
+  font-size: 0.6rem;
+  color: white;
+}
+
+.img-thumb-container:hover img {
+  opacity: 0.75;
+}
